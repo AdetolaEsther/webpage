@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.btn{
+
+    
+    border-radius: 25px;
+    width: 100px;
+    
+    padding: 15px;
+    cursor: grab;
+   background-color: darkgrey;
+   
+   margin-left: auto;
+   margin-right: auto;
+}
+.btn:hover{
+    background-color: lavender;
+}
+    </style>
+</head>
+<body>
+    <button class="btn"> CLICK ME</button>
+    <script>
+        const colors = ['red','yellow','green', 'blue', 'brown','grey','black','purple', 'peach'];
+        const lenght = 9;
+        
+        function changeColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            return colors[randomIndex];
+        }
+
+        document.querySelector('.btn').addEventListener('click', function() {
+            const randomColor = changeColor();
+            document.body.style.backgroundColor = randomColor;
+        });
+        
+        </script>
+</body>
+</html>
